@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel = "icon"
+    href = "./Images/RSCR_Logo_16px.ico"
+    type = "image/x = icon"/>
+    <title>My Website</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <h1>Nathan Taylor's RSCR Webpage</h1>
+    <div id= 'Page_Info'>
+        <p>Hi, My name is Nathan Taylor, and this is a web page I am testing!</p>
+        <p><a href="https://www.roblox.com/games/2906928767">This is my game:</a> <strong>Ro Scale Central Railroad!</strong></p>
+    </div>
+    <h2>Here is my model of a Norfolk and Western Class Y6b Number 2171:</h2>
+    <img src="./Images/Y6B_Picture.png" alt ="" id = "Y6B_Picture">
+    <div>
+        <h2> Some of the trains in my Game:</h2>
+        <ul id = "Some_Trains">
+            <li>Norfolk and Western Y6b</li>
+            <li>New York Central J3a</li>
+            <li>Pennsylvania T1</li>
+            <li>Reading Railroad T-1</li>
+            <li>Union Pacific Big Boy</li>
+        </ul>
+    </div>
+    <div>
+        <h2>My Favorite Trains in the Game</h2>
+        <ol id="Favorite_Trains">
+            <li>Pennsylvania Class T1</li>
+            <li>2-6-2 Prairie</li>
+            <li>Southen Pacific GS-4</li>
+            <li>Union Pacific FeF-3</li>
+            <li>LBSCR E-2</li>
+        </ol>
+    </div>
+    <div id="TrainTableDiv">
+        <h2> Some Train Info:</h2>
+        <table id="TrainTable">
+            <thead>
+                <tr>
+                    <th scope = "col">"Name</th>
+                    <th scope = "col">Power</th>
+                    <th scope = "col">Wheelset</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Big Boy</td>
+                    <td>Steam</td>
+                    <td>4-8-8-4</td>
+                </tr>
+                <tr>
+                    <td>E2</td>
+                    <td>Steam</td>
+                    <td>0-6-0T</td>
+                </tr>
+                <tr>
+                    <td>EMD F7</td>
+                    <td>Diesel</td>
+                    <td>B-B</td>
+                </tr>
+                <tr>
+                    <td>C&O M-1</td>
+                    <td>Steam Turbine Electric</td>
+                    <td>4-6-2+4-6-2+0-4-0TE</td>
+                <tr>
+            </tbody>
+        </table>
+    </div>
+    <div  id = "Suggestion_Form">
+        <h2>Suggest a Train:</h2>
+        <form action = "#">
+            <!--Form Testing Inputs-->
+            <div>
+                <label for="Email">Email Address</label>
+                <input type="email" name="Email" id = "Email" placeholder="Email Address">
+            </div>
+            <div>
+                <label for="Train_Name">Train Name</label>
+                <input type="text" name="TrainName" ID = "Train_Name" placeholder="Train Name Here">
+                <br>
+                <label for="Train_Year">First Year Built. (Pre-1960)</label>
+                <input type="number" max="1959" min="1770" name="TrainName" ID = "Train_Year" placeholder="Year"> 
+            </div>
+            <div> Power Type:
+                <label for="Steam" >Steam</label>
+                <input type="radio" id="Steam" Name = "Train_Type">
+                <label for="Diesel" >Diesel</label>
+                <input type="radio" id="Diesel" Name = "Train_Type">
+                <label for="Other"  >Other</label>
+                <input type="radio" id="Other" Name = "Train_Type">
+            </div>
+            <p> Info or Comments:</p>
+            <textarea name = "Train_Info" id = "Train_Info" cols = "40" rows = "6" placeholder="Information About Your Suggestion"></textarea>
+            <p>Confirm Suggestion</p>
+            <input type = "submit" value = "Suggest">
+        </form>
+        </div>
+</body>
+</html>
