@@ -101,7 +101,7 @@
                 <input type="text" name="TrainName" ID = "Train_Name" placeholder="Train Name Here">
                 <br>
                 <label for="Train_Year">First Year Built. (Pre-1960)</label>
-                <input type="number" max="1959" min="1770" name="TrainName" ID = "Train_Year" placeholder="Year"> 
+                <input type="number" max="1959" min="1770" name="TrainYear" ID = "Train_Year" placeholder="Year"> 
             </div>
             <div> Power Type:
                 <label for="Steam" >Steam</label>
@@ -114,7 +114,8 @@
             <p> Info or Comments:</p>
             <textarea name = "Train_Info" id = "Train_Info" cols = "40" rows = "6" placeholder="Information About Your Suggestion"></textarea>
             <p>Confirm Suggestion</p>
-            <input type = "submit" value = "Suggest">
+            <button onclick="PrintStuff(Train_Name.text)">Suggest</button>
+            <script src="form-script.js"></script>
         </form>
         </div>
 </body>
