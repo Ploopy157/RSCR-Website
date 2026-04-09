@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel = "icon"
-    href = "./Images/RSCR_Logo_16px.ico"
-    type = "image/x = icon"/>
+    <link rel="icon" href="./Images/RSCR_Logo_16px.ico" type="image/x = icon" />
     <title>Ro-Scale Central Railroad</title>
     <link rel="stylesheet" href="./Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
+
 <body>
     <h1>Ro-Scale Central Railroad</h1>
-    <div id= 'Page_Info'>
+    <div id='Page_Info'>
         <p>Hi! My name is Nathan Taylor (AKA Ploopy157/PlerpIsaiah), and this is a web page I am testing!</p>
         <p>Soon it will be the official site for Ro-Scale Central!</p>
-        <a id = "Game-Link" href="https://www.roblox.com/games/2906928767"><strong>You can play the game here!</strong></a>
+        <a id="Game-Link" href="https://www.roblox.com/games/2906928767"><strong>You can play the game
+                here!</strong></a>
     </div>
     <h2>Here is my model of a Norfolk and Western Class Y6b Number 2171:</h2>
-    <img src="./Images/Y6B_Picture.png" alt ="" id = "Y6B_Picture">
+    <img src="./Images/Y6B_Picture.png" alt="" id="Y6B_Picture">
     <div>
         <h2> Some of the trains in my Game:</h2>
-        <ul id = "Some_Trains">
+        <ul id="Some_Trains">
             <li>Norfolk and Western Y6b</li>
             <li>New York Central J3a</li>
             <li>Pennsylvania T1</li>
@@ -44,9 +45,9 @@
         <table id="TrainTable">
             <thead>
                 <tr>
-                    <th scope = "col">"Name</th>
-                    <th scope = "col">Power</th>
-                    <th scope = "col">Wheelset</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Power</th>
+                    <th scope="col">Wheelset</th>
                 </tr>
             </thead>
             <tbody>
@@ -88,35 +89,63 @@
             </tbody>
         </table>
     </div>
-    <div  id = "Suggestion_Form">
+    <div id="Suggestion_Form">
         <h2>Suggest a Train:</h2>
-        <form action = "#">
+        <form action="#">
             <!--Form Testing Inputs-->
             <div>
                 <label for="Email">Email Address</label>
-                <input type="email" name="Email" id = "Email" placeholder="Email Address">
+                <input type="email" name="Email" id="Email" placeholder="Email Address">
             </div>
             <div>
                 <label for="Train_Name">Train Name</label>
-                <input type="text" name="TrainName" ID = "Train_Name" placeholder="Train Name Here">
+                <input type="text" name="TrainName" ID="Train_Name" placeholder="Train Name Here">
                 <br>
                 <label for="Train_Year">First Year Built. (Pre-1960)</label>
-                <input type="number" max="1959" min="1770" name="TrainYear" ID = "Train_Year" placeholder="Year"> 
+                <input type="number" max="1959" min="1770" name="TrainYear" ID="Train_Year" placeholder="Year">
             </div>
             <div> Power Type:
-                <label for="Steam" >Steam</label>
-                <input type="radio" id="Steam" Name = "Train_Type">
-                <label for="Diesel" >Diesel</label>
-                <input type="radio" id="Diesel" Name = "Train_Type">
-                <label for="Other"  >Other</label>
-                <input type="radio" id="Other" Name = "Train_Type">
+                <label for="Steam">Steam</label>
+                <input type="radio" id="Steam" Name="Train_Type">
+                <label for="Diesel">Diesel</label>
+                <input type="radio" id="Diesel" Name="Train_Type">
+                <label for="Other">Other</label>
+                <input type="radio" id="Other" Name="Train_Type">
             </div>
             <p> Info or Comments:</p>
-            <textarea name = "Train_Info" id = "Train_Info" cols = "40" rows = "6" placeholder="Information About Your Suggestion"></textarea>
+            <textarea name="Train_Info" id="Train_Info" cols="40" rows="6"
+                placeholder="Information About Your Suggestion"></textarea>
             <p>Confirm Suggestion</p>
             <button onclick="PrintStuff(Train_Name.text)">Suggest</button>
             <script src="form-script.js"></script>
         </form>
-        </div>
+    </div>
+    <table id="DataTable" border="1"></table>
 </body>
+
+<script>
+    const CsvUrl =
+        "https://docs.google.com/spreadsheets/d/1GXB5mzN1DkUanZaJPm-ZpE45_vtOAI6gDY6L39Z5EdE/export?format=csv";
+
+    Papa.parse(CsvUrl, {
+      download: true,
+      complete: function(Result) {
+        const Table = document.getElementById("DataTable");
+
+        Result.data.forEach(RowData => {
+          const Row = document.createElement("tr");
+          Row.className = "DataRow"
+
+          RowData.forEach(CellData => {
+            const Cell = document.createElement("td");
+            Cell.textContent = CellData;
+            Row.appendChild(Cell);
+          });
+
+          Table.appendChild(Row);
+        });
+      }
+    });
+  </script>
+
 </html>

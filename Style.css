@@ -1,9 +1,7 @@
 *{
     font-family: serif;
     text-shadow: 2px 2px black;
-a:visited{
-    color: rgb(30, 197, 30);
-}
+
 }
 body{
     background-image: url(./Images/Background.png);
@@ -15,20 +13,23 @@ body{
     text-align: center;
 }
 h1{
-    text-align: left;
-    border: 3px solid black;
+    text-align: center;
+    
     background-color: rgba(78, 78, 78, 0.7);
     border-radius: 20px;
     box-shadow: 8px 8px 5px black;
     padding: 10px;
+    font-size: xx-large;
 }
 #Game-Link{
     font-size: larger;
 }
 #Y6B_Picture{
-    border: 3px solid darkblue;
+    aspect-ratio: 728/409;
     border-radius: 20px;
     box-shadow: 8px 8px 5px black;
+    width: 50%;
+    margin: 10px auto;
 }
 button{
     padding: 10px;
@@ -42,23 +43,22 @@ button{
 }
 #TrainTable{
     display: inline-block;
-    background-color: rgb(30, 18, 110);
-    border: solid 3px gold;
-    border-radius: 20px;
+    background-color: rgb(73, 73, 73);
     margin: 10px 20%;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 1em;
     font-size: large;
     box-shadow: 8px 8px 5px black;
 }
 td{
-    border: 1px solid gold;
-    border-radius: 7px;
+
     padding: 5px;
+    border: 1px solid gold;
 }
 th{
-    border: white solid 1px;
-    border-radius: 7px;
+
     color: white;
+    border: 1px solid white;
 }
 li{
     text-align: left;
@@ -66,7 +66,6 @@ li{
 }
 #Favorite_Trains{
     display: inline-block;
-    border: 2px solid navy;
     border-radius: 20px;
     background-color: rgba(78, 78, 78, 0.7);
     padding: 8px 10%;
@@ -74,7 +73,6 @@ li{
 }
 #Some_Trains{
     display: inline-block;
-    border: 2px solid navy;
     border-radius: 20px;
     background-color: rgba(78, 78, 78, 0.7);
     padding: 8px 10%;
@@ -84,7 +82,6 @@ li{
 #Suggestion_Form{
     border-radius: 20px;
     display: inline-block;
-    border: 2px solid navy;
     background-color: rgba(78, 78, 78, 0.7);
     padding: 8px 10%;
     box-shadow: 8px 8px 5px black;
@@ -93,7 +90,6 @@ li{
 #Page_Info{
     border-radius: 20px;
     display: inline-block;
-    border: 2px solid navy;
     background-color: rgba(78, 78, 78, 0.7);
     padding: 8px 10%;
     box-shadow: 8px 8px 5px black;
@@ -105,8 +101,29 @@ input,textarea{
 
 a{
     color: rgb(245, 225, 110);
+    text-decoration: none;
 }
 
 a:visited{
     color: unset;
+    
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#DataTable{
+    margin: 30px auto;
+    background-color: rgba(78, 78, 78);
+    overflow: scroll;
+    max-height: 50%;
+}
+
+.DataRow:first-of-type{
+    color: white;
+}
+
+.DataRow:first-child{
+    color: white;
 }
