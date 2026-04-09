@@ -7,14 +7,15 @@
     rel = "icon"
     href = "./Images/RSCR_Logo_16px.ico"
     type = "image/x = icon"/>
-    <title>My Website</title>
+    <title>Ro-Scale Central Railroad</title>
     <link rel="stylesheet" href="./Style.css">
 </head>
 <body>
-    <h1>Nathan Taylor's RSCR Webpage</h1>
+    <h1>Ro-Scale Central Railroad</h1>
     <div id= 'Page_Info'>
-        <p>Hi, My name is Nathan Taylor (AKA Ploopy157/PlerpIsaiah), and this is a web page I am testing!</p>
-        <p><a href="https://www.roblox.com/games/2906928767">This is my game:</a> <strong>Ro Scale Central Railroad!</strong></p>
+        <p>Hi! My name is Nathan Taylor (AKA Ploopy157/PlerpIsaiah), and this is a web page I am testing!</p>
+        <p>Soon it will be the official site for Ro-Scale Central!</p>
+        <a id = "Game-Link" href="https://www.roblox.com/games/2906928767"><strong>You can play the game here!</strong></a>
     </div>
     <h2>Here is my model of a Norfolk and Western Class Y6b Number 2171:</h2>
     <img src="./Images/Y6B_Picture.png" alt ="" id = "Y6B_Picture">
@@ -68,7 +69,22 @@
                     <td>C&O M-1</td>
                     <td>Steam Turbine Electric</td>
                     <td>4-6-2+4-6-2+0-4-0TE</td>
+                </tr>
                 <tr>
+                    <td>Climax</td>
+                    <td>Steam (Geared)</td>
+                    <td>0-4-4-0T</td>
+                </tr>
+                <tr>
+                    <td>Berkshire</td>
+                    <td>Steam</td>
+                    <td>2-8-4</td>
+                </tr>
+                <tr>
+                    <td>SW-1</td>
+                    <td>Diesel</td>
+                    <td>B-B</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -85,7 +101,7 @@
                 <input type="text" name="TrainName" ID = "Train_Name" placeholder="Train Name Here">
                 <br>
                 <label for="Train_Year">First Year Built. (Pre-1960)</label>
-                <input type="number" max="1959" min="1770" name="TrainName" ID = "Train_Year" placeholder="Year"> 
+                <input type="number" max="1959" min="1770" name="TrainYear" ID = "Train_Year" placeholder="Year"> 
             </div>
             <div> Power Type:
                 <label for="Steam" >Steam</label>
@@ -98,7 +114,8 @@
             <p> Info or Comments:</p>
             <textarea name = "Train_Info" id = "Train_Info" cols = "40" rows = "6" placeholder="Information About Your Suggestion"></textarea>
             <p>Confirm Suggestion</p>
-            <input type = "submit" value = "Suggest">
+            <button onclick="PrintStuff(Train_Name.text)">Suggest</button>
+            <script src="form-script.js"></script>
         </form>
         </div>
 </body>
