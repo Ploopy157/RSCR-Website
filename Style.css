@@ -96,3 +96,11 @@ li{
 input,textarea{
     text-shadow: none;
 }
+
+a{
+    color: rgb(245, 225, 110);
+}
+
+a:visited{
+    color: unset;
+}
